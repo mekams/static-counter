@@ -4,11 +4,22 @@ function App(){
   const [count, setCount] = useState(0);   //useState hook used to set the counter initially to value '0'
  
   useEffect(()=>{
-    alert("Welcome to the Counter-App");    //used with array because alert msg will only be rendered once
+    let date =new Date();     //getting the standard date and time with time zone
+    let hrs = date.getHours();  //fetching  only hours (0-23:59 ~ 24)
+    console.log(hrs)
+    if (hrs===0 || hrs <12){
+      alert("Good Morning! Welcome to the Counter-App")
+    }
+    else if (hrs>=12 || hrs <16){
+      alert("Good Afternoon! Welcome to the Counter-App")
+    }
+    else if (hrs>=16 || hrs <24){
+      alert("Good Evening! Welcome to the Counter-App")       //used with array because alert msg will only be rendered once
+    }
   },[]);
 
   // useEffect(()=>{
-  //   alert("Welcome to the Counter-App");  //used without array because alert msg will be rendered each time buttons pressed
+  //   alert("Welcome to the Counter-App");  //if used without array so alert msg will be rendered each time buttons pressed
   // });
   
   return(
