@@ -2,20 +2,27 @@ import React, {useState,useEffect} from "react";
 
 function App(){
   const [count, setCount] = useState(0);   //useState hook used to set the counter initially to value '0'
- 
+  
+  // let date =new Date();     //getting the standard date and time with time zone
+  // let hour = date.getHours();  //fetching  only hours (0-23:59 ~ 24)
+  // console.log(hour)              // line 6,7,8 are depedencies to hook so declared inside useffect
+  
+  let time = (hrs)=>{
+    if (hrs===0 || hrs <12){
+       alert("Good Morning! Welcome to the Counter-App")
+    }
+    else if (hrs>=12 && hrs<16){
+       alert("Good Afternoon! Welcome to the Counter-App")
+    }
+    else if (hrs >=16 || hrs<24){
+       alert("Good Evening! Welcome to the Counter-App")       //used with array because alert msg will only be rendered once
+    }
+  }
   useEffect(()=>{
     let date =new Date();     //getting the standard date and time with time zone
-    let hrs = date.getHours();  //fetching  only hours (0-23:59 ~ 24)
-    console.log(hrs)
-    if (hrs===0 || hrs <12){
-      alert("Good Morning! Welcome to the Counter-App")
-    }
-    else if (hrs>=12 || hrs <16){
-      alert("Good Afternoon! Welcome to the Counter-App")
-    }
-    else if (hrs>=16 || hrs <24){
-      alert("Good Evening! Welcome to the Counter-App")       //used with array because alert msg will only be rendered once
-    }
+    let hour = date.getHours();  //fetching  only hours (0-23:59 ~ 24)
+    console.log(hour)
+    time(hour)
   },[]);
 
   // useEffect(()=>{
