@@ -1,6 +1,6 @@
 html body{
     background-color:rgba(125, 201, 184, 0.439);
-    margin:250px;
+    /* margin:250px; */
     box-sizing: border-box;
 }
 .card-body{
