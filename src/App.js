@@ -7,14 +7,14 @@ function App(){
   // let hour = date.getHours();  //fetching  only hours (0-23:59 ~ 24)
   // console.log(hour)              // line 6,7,8 are depedencies to hook so declared inside useffect
   
-  let time = (hrs)=>{
+  let time = (hrs)=>{               //function invoked inside use effect hook
     if (hrs===0 || hrs <12){
        alert("Good Morning! Welcome to the Counter-App")
     }
     else if (hrs>=12 && hrs<16){
        alert("Good Afternoon! Welcome to the Counter-App")
     }
-    else if (hrs >=16 || hrs<24){
+    else if (hrs >=16 || hrs<24){         //can not use else because not supported in react js
        alert("Good Evening! Welcome to the Counter-App")       //used with array because alert msg will only be rendered once
     }
   }
