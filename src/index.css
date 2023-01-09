@@ -1,0 +1,8 @@
+html body{
+    background-color:rgba(125, 201, 184, 0.439);
+    margin:250px;
+    box-sizing: border-box;
+}
+.card-body{
+    background-image: linear-gradient(to left,rgb(196, 248, 100), rgb(70, 203, 227),rgb(201, 122, 181));
+}

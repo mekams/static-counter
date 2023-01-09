@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 
-function App(props){
+function App(){
   const [count, setCount] = useState(0);   //useState hook used to set the counter initially to value '0'
  
   useEffect(()=>{
